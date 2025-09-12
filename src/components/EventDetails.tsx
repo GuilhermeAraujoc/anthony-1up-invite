@@ -13,7 +13,7 @@ export const EventDetails = () => {
     {
       icon: Calendar,
       label: 'Data',
-      value: 'Quinta-feira, 21 de Novembro de 2024',
+      value: 'Sexta-feira, 21 de Novembro de 2025',
       color: 'primary',
     },
     {

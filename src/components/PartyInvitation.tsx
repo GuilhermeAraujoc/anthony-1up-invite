@@ -8,8 +8,8 @@ import marioHero from '@/assets/mario-hero.png';
 import marioStar from '@/assets/mario-star.png';
 
 export const PartyInvitation = () => {
-  // Data do aniversário - 21 de novembro de 2024
-  const partyDate = new Date('2024-11-21T15:00:00');
+  // Data do aniversário - 21 de novembro de 2025
+  const partyDate = new Date('2025-11-21T15:00:00');
 
   const handleConfirmPresence = () => {
     // Enviar confirmação por WhatsApp
