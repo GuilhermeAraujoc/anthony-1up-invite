@@ -2,20 +2,21 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { CountdownTimer } from './CountdownTimer';
 import { EventDetails } from './EventDetails';
-import { Gift, Heart, PartyPopper, MapPin } from 'lucide-react';
+import { GoogleMap } from './GoogleMap';
+import { Gift, Heart, PartyPopper } from 'lucide-react';
 import marioHero from '@/assets/mario-hero.png';
 import marioStar from '@/assets/mario-star.png';
 
 export const PartyInvitation = () => {
-  // Data do aniversário - você pode ajustar esta data
-  const partyDate = new Date('2024-12-15T15:00:00');
+  // Data do aniversário - 21 de novembro de 2024
+  const partyDate = new Date('2024-11-21T15:00:00');
 
   const handleConfirmPresence = () => {
-    // Você pode adicionar lógica para enviar RSVP por WhatsApp ou email
+    // Enviar confirmação por WhatsApp
     const message = encodeURIComponent(
       'Olá! Confirmo presença no aniversário de 1 ano do Anthony! 🎉'
     );
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5591985546715?text=${message}`, '_blank');
   };
 
   return (
@@ -81,25 +82,18 @@ export const PartyInvitation = () => {
           </div>
         </Card>
 
-        {/* Botões de Ação */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* Mapa do Local */}
+        <GoogleMap />
+
+        {/* Botão de Confirmação */}
+        <div className="flex justify-center">
           <Button 
             onClick={handleConfirmPresence}
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-luigi px-8 py-4 text-lg font-bold transform transition-all duration-300 hover:scale-105"
           >
             <Gift className="w-5 h-5 mr-2" />
-            Confirmar Presença
-          </Button>
-          
-          <Button 
-            variant="outline"
-            size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-bold"
-            onClick={() => window.open('https://maps.google.com/?q=Rua+das+Flores+123', '_blank')}
-          >
-            <MapPin className="w-5 h-5 mr-2" />
-            Ver Local
+            Confirmar Presença via WhatsApp
           </Button>
         </div>
 
