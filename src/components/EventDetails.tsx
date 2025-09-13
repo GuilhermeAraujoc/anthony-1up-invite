@@ -1,47 +1,47 @@
-import { Card } from '@/components/ui/card';
-import { Calendar, Clock, MapPin, Star } from 'lucide-react';
+import { Card } from "@/components/ui/card";
+import { Calendar, Clock, MapPin, Star } from "lucide-react";
 
 interface EventDetail {
   icon: any;
   label: string;
   value: string;
-  color: 'primary' | 'secondary' | 'accent' | 'warning';
+  color: "primary" | "secondary" | "accent" | "warning";
 }
 
 export const EventDetails = () => {
   const details: EventDetail[] = [
     {
       icon: Calendar,
-      label: 'Data',
-      value: 'Sexta-feira, 21 de Novembro de 2025',
-      color: 'primary',
+      label: "Data",
+      value: "Domingo, 02 de Novembro de 2025",
+      color: "primary",
     },
     {
       icon: Clock,
-      label: 'Horário',
-      value: '15:00 às 18:00',
-      color: 'secondary',
+      label: "Horário",
+      value: "às 18:30",
+      color: "secondary",
     },
     {
       icon: MapPin,
-      label: 'Local',
-      value: 'Rua das Flores, 123 - Festa Kids',
-      color: 'accent',
+      label: "Local",
+      value: "ballon mágico buffet e Park",
+      color: "accent",
     },
     {
       icon: Star,
-      label: 'Tema',
-      value: 'Super Mario Bros',
-      color: 'warning',
+      label: "Tema",
+      value: "Super Mario Bros",
+      color: "warning",
     },
   ];
 
   const getCardStyles = (color: string) => {
     const styles = {
-      primary: 'bg-primary text-primary-foreground shadow-mario',
-      secondary: 'bg-secondary text-secondary-foreground shadow-lg',
-      accent: 'bg-accent text-accent-foreground shadow-luigi',
-      warning: 'bg-warning text-warning-foreground shadow-star',
+      primary: "bg-primary text-primary-foreground shadow-mario",
+      secondary: "bg-secondary text-secondary-foreground shadow-lg",
+      accent: "bg-accent text-accent-foreground shadow-luigi",
+      warning: "bg-warning text-warning-foreground shadow-star",
     };
     return styles[color as keyof typeof styles];
   };
@@ -51,9 +51,11 @@ export const EventDetails = () => {
       {details.map((detail, index) => {
         const IconComponent = detail.icon;
         return (
-          <Card 
+          <Card
             key={detail.label}
-            className={`p-6 transform transition-all duration-300 hover:scale-105 float ${getCardStyles(detail.color)}`}
+            className={`p-6 transform transition-all duration-300 hover:scale-105 float ${getCardStyles(
+              detail.color
+            )}`}
             style={{ animationDelay: `${index * 0.2}s` }}
           >
             <div className="flex items-center space-x-4">
@@ -61,12 +63,8 @@ export const EventDetails = () => {
                 <IconComponent className="w-8 h-8" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium opacity-90">
-                  {detail.label}
-                </p>
-                <p className="text-lg font-bold truncate">
-                  {detail.value}
-                </p>
+                <p className="text-sm font-medium opacity-90">{detail.label}</p>
+                <p className="text-lg font-bold truncate">{detail.value}</p>
               </div>
             </div>
           </Card>
