@@ -108,7 +108,7 @@ export const PartyInvitation = () => {
 
         {/* Footer */}
         <div className="text-center text-foreground/60 text-sm">
-          <p>Com muito amor, a família do Anthony 💙</p>
+          <p>Com muito amor, a família do Anthony. 💙</p>
         </div>
       </div>
     </div>
