@@ -19,7 +19,7 @@ export const EventDetails = () => {
     {
       icon: Clock,
       label: "Horário",
-      value: "às 18:30",
+      value: "Início 18:30",
       color: "secondary",
     },
     {
