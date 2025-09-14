@@ -21,6 +21,17 @@ export const PartyInvitation = () => {
 
   return (
     <div className="min-h-screen py-8 px-4">
+      <audio
+        src="src/assets/musica.mp3"
+        autoPlay
+        loop
+        muted
+        onCanPlay={(e) => {
+          // desmuta assim que o navegador permitir
+          const audio = e.currentTarget;
+          audio.muted = false;
+        }}
+      />
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Header com foto do Mario */}
         <div className="text-center space-y-6">
